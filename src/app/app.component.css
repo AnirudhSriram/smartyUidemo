@@ -1,0 +1,13 @@
+#sidePane{
+    background-color: aquamarine;
+    
+}
+#mainPane{
+    background-color: cornflowerblue;
+}
+#mainRegion{
+    height: 95%;
+}
+.container-fluid{
+    height: 100%;
+}

@@ -1,5 +1,5 @@
-<div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action" *ngFor="let region of regionList" (click)="setRegion(region.id)">{{region.name}}</a>
+<div class="list-group-flush">
+    <a href="#" class="list-group-item " *ngFor="let region of regionList" (click)="setRegion(region.id)" [class.active]="region.id===selectedRegion">{{region.name}}</a>
   </div>
 
   

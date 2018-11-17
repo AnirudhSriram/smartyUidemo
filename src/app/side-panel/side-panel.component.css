@@ -1,0 +1,15 @@
+.list-group-flush{
+    
+    background-color: transparent;
+}
+
+.list-group-item {
+    color:white;
+    background-color: transparent;
+    
+}
+
+.active{
+    background-color: #015C8D ;
+    border:0px;
+}

@@ -26,7 +26,7 @@ export class SidePanelComponent implements OnInit {
     {id:4,name:"Region-4"},
 
   ]
-  public selectedRegion= {};
+  public selectedRegion=1;
   
   setRegion(id){
       this.selectedRegion = id;

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {chartSelectedService} from "./chart-select.service"
 import { AppComponent } from './app.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { MainPanelComponent } from './main-panel/main-panel.component';
@@ -20,7 +20,7 @@ import { MapViewComponent } from './map-view/map-view.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [chartSelectedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

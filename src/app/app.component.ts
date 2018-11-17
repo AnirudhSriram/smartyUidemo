@@ -1,5 +1,5 @@
-import { Component, ViewChild,ElementRef } from '@angular/core';
-
+import { Component } from '@angular/core';
+import {regionData} from "./regionData";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,10 @@ import { Component, ViewChild,ElementRef } from '@angular/core';
 
 
 export class AppComponent {
+  chartNumber:number = 1;
+  onSelectedRegion(region:number){
+    this.chartNumber = region;
+  }
   
  
 }

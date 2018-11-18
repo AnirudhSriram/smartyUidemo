@@ -45,7 +45,8 @@ export class MainPanelComponent implements OnInit {
       
     chart: {
       renderTo: 'container',
-      type: 'line'
+      type: 'line',
+      zoomType: 'x'
     },
     title: {
       text: `Energy Production in London Array`
@@ -72,7 +73,8 @@ export class MainPanelComponent implements OnInit {
 
     chart: {
       renderTo: 'container',
-      type: 'line'
+      type: 'line',
+      zoomType: 'x'
     },
     title: {
       text: `Energy Production in Bay State Wind`
@@ -96,7 +98,8 @@ export class MainPanelComponent implements OnInit {
 
     chart: {
       renderTo: 'container',
-      type: 'line'
+      type: 'line',
+      zoomType: 'x'
     },
     title: {
       text: `Energy Production in Borkum Riffgrund 1`
@@ -131,7 +134,7 @@ export class MainPanelComponent implements OnInit {
     xAxis: {
       type: 'datetime',
       alignTicks: true,
-      
+      zoomType: 'x'
     },
     yAxis: {
       title: {

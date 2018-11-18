@@ -1,3 +1,6 @@
 #chartArea{
     overflow: scroll;
 }
+.card-deck{
+    margin-top: 10px;
+}

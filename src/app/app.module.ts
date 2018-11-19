@@ -7,7 +7,7 @@ import { MainPanelComponent } from './main-panel/main-panel.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MapViewComponent } from './map-view/map-view.component';
-import { HighchartsService } from './highcharts.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { HighchartsService } from './highcharts.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [chartSelectedService,HighchartsService],
+  providers: [chartSelectedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

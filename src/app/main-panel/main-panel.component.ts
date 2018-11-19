@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef,Input } from '@angular/core';
-import { HighchartsService } from '../highcharts.service';
+import {chart} from "highcharts";
 import * as Highcharts from 'highcharts';
 import {chartSelectedService} from '../chart-select.service';
 @Component({
@@ -14,12 +14,13 @@ export class MainPanelComponent implements OnInit {
 
   @ViewChild(`chartTarget`) chartTarget: ElementRef;
   
-  constructor(private chartService : chartSelectedService,public hcs: HighchartsService) { 
+  constructor(private chartService : chartSelectedService) { 
     
     this.chartService.myMethod$.subscribe((data) => {
       this.selectedRegion = data;
       document.querySelector("#chartArea").innerHTML="";
-      this.hcs.createChart(document.querySelector("#chartArea"),this.chartsList[this.selectedRegion]);
+      this.chart = chart(this.chartTarget.nativeElement,  this.chartsList[this.selectedRegion]);
+      //this.hcs.createChart(document.querySelector("#chartArea"),this.chartsList[this.selectedRegion]);
       console.log(this.selectedRegion );
     });
     this.chartService.details$.subscribe(data=>{
@@ -31,7 +32,8 @@ export class MainPanelComponent implements OnInit {
   
   ngOnInit() {
     this.selectedRegion=1;
-    this.hcs.createChart(document.querySelector("#chartArea"),this.Options1); 
+    this.chart = chart(this.chartTarget.nativeElement, this.chartsList[this.selectedRegion]);
+   // this.hcs.createChart(document.querySelector("#chartArea"),this.Options1); 
     
   
   }
@@ -39,7 +41,7 @@ export class MainPanelComponent implements OnInit {
  
   
   
-  // chart: Highcharts.chartObject;
+  chart: Highcharts.chartObject;
 
   Options2 = {
       
